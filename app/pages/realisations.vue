@@ -1,0 +1,228 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Nos Réalisations Avant / Après — Cleaning Pro Service Parakou',
+  description: 'Visualisez les résultats spectaculaires de nos prestations de nettoyage à Parakou : studios, appartements et grand nettoyage en profondeur.',
+})
+
+interface Realisation {
+  id: string
+  title: string
+  category: 'studio' | 'appartement' | 'general'
+  categoryLabel: string
+  location: string
+  before: string
+  after: string
+  description: string
+  duration: string
+  price: string
+}
+
+const projects: Realisation[] = [
+  {
+    id: 'studio-titirou',
+    title: 'Studio Étudiant — Quartier Titirou',
+    category: 'studio',
+    categoryLabel: 'Studio',
+    location: 'Quartier Titirou, Parakou',
+    before: '/images/realisation_living_before.jpg',
+    after: '/images/realisation_living_after.jpg',
+    description: 'Remise en état complète d’un studio : dépoussiérage des meubles, lavage approfondi des sols en carrelage, désinfection kitchenette et salle de bain.',
+    duration: '2h30',
+    price: '3 000 – 7 000 FCFA',
+  },
+  {
+    id: 'appart-f3',
+    title: 'Appartement F3 — Centre-Ville Parakou',
+    category: 'appartement',
+    categoryLabel: 'Appartement',
+    location: 'Centre-ville, Parakou',
+    before: '/images/realisation_kitchen_before.jpg',
+    after: '/images/realisation_kitchen_after.jpg',
+    description: 'Nettoyage complet après déménagement : dégraissage de la cuisine, détartrage salle d’eau, nettoyage soigné de toutes les chambres et balcons.',
+    duration: '4 heures',
+    price: '10 000 – 20 000 FCFA',
+  },
+  {
+    id: 'general-villa',
+    title: 'Villa R+1 Fin de Chantier — Ladji Farani',
+    category: 'general',
+    categoryLabel: 'Nettoyage Général',
+    location: 'Quartier Ladji Farani, Parakou',
+    before: '/images/realisation_postcon_before.jpg',
+    after: '/images/realisation_postcon_after.jpg',
+    description: 'Élimination des poussières de ciment et plâtre, décapage et lustrage de 220 m² de carrelage, lavage haute brillance de toutes les baies vitrées.',
+    duration: '6 heures',
+    price: '10 000 – 30 000 FCFA',
+  },
+  {
+    id: 'bureau-pro',
+    title: 'Locaux Professionnels & Bureaux — Parakou',
+    category: 'general',
+    categoryLabel: 'Nettoyage Général',
+    location: 'Zone administrative, Parakou',
+    before: '/images/realisation_office_before.jpg',
+    after: '/images/realisation_office_after.jpg',
+    description: 'Entretien intégral d\'un espace de bureaux : désinfection postes de travail, vitrines, sanitaires et traitement des revêtements de sol.',
+    duration: '3h30',
+    price: '10 000 – 30 000 FCFA',
+  },
+]
+
+const currentFilter = ref<'all' | 'studio' | 'appartement' | 'general'>('all')
+
+const filteredProjects = computed(() => {
+  if (currentFilter.value === 'all') return projects
+  return projects.filter(p => p.category === currentFilter.value)
+})
+</script>
+
+<template>
+  <div class="py-8 sm:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <!-- En-tête -->
+      <div class="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
+        <span class="section-eyebrow">Galerie Avant / Après</span>
+        <h1 class="font-display text-3xl xs:text-4xl sm:text-5xl font-extrabold text-slate-900 break-words">
+          La preuve par <span class="text-gradient-gold">l'image</span>
+        </h1>
+        <p class="text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed">
+          Découvrez la métamorphose de nos interventions à Parakou. Utilisez le curseur interactif sur chaque projet pour comparer le résultat.
+        </p>
+      </div>
+
+      <!-- Filtres -->
+      <div class="mt-8 sm:mt-12 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+        <button
+          class="rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer"
+          :class="[
+            currentFilter === 'all'
+              ? 'bg-gold-gradient text-white shadow-gold'
+              : 'border border-slate-200 bg-white text-slate-600 hover:border-gold-500/40 hover:bg-gold-50 hover:text-gold-700 shadow-sm'
+          ]"
+          @click="currentFilter = 'all'"
+        >
+          Tous nos projets ({{ projects.length }})
+        </button>
+        <button
+          class="rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer"
+          :class="[
+            currentFilter === 'studio'
+              ? 'bg-gold-gradient text-white shadow-gold'
+              : 'border border-slate-200 bg-white text-slate-600 hover:border-gold-500/40 hover:bg-gold-50 hover:text-gold-700 shadow-sm'
+          ]"
+          @click="currentFilter = 'studio'"
+        >
+          Studios (3 000 – 7 000 F)
+        </button>
+        <button
+          class="rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer"
+          :class="[
+            currentFilter === 'appartement'
+              ? 'bg-gold-gradient text-white shadow-gold'
+              : 'border border-slate-200 bg-white text-slate-600 hover:border-gold-500/40 hover:bg-gold-50 hover:text-gold-700 shadow-sm'
+          ]"
+          @click="currentFilter = 'appartement'"
+        >
+          Appartements (10 000 – 20 000 F)
+        </button>
+        <button
+          class="rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer"
+          :class="[
+            currentFilter === 'general'
+              ? 'bg-gold-gradient text-white shadow-gold'
+              : 'border border-slate-200 bg-white text-slate-600 hover:border-gold-500/40 hover:bg-gold-50 hover:text-gold-700 shadow-sm'
+          ]"
+          @click="currentFilter = 'general'"
+        >
+          Nettoyage Général (10 000 – 30 000 F)
+        </button>
+      </div>
+
+      <!-- Projets -->
+      <div class="mt-10 sm:mt-14 space-y-12 sm:space-y-16">
+        <article
+          v-for="project in filteredProjects"
+          :key="project.id"
+          class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center rounded-3xl border border-slate-200/80 bg-white p-5 sm:p-8 shadow-xl transition-all duration-300 hover:border-gold-500/30 hover:shadow-2xl"
+        >
+          <!-- Comparateur Slider (7 cols) -->
+          <div class="lg:col-span-7">
+            <UiBeforeAfterSlider
+              :before-image="project.before"
+              :after-image="project.after"
+              :before-alt="`${project.title} avant nettoyage`"
+              :after-alt="`${project.title} après nettoyage`"
+              aspect-ratio="aspect-[16/10]"
+              :initial-position="50"
+            />
+          </div>
+
+          <!-- Fiche Descriptive (5 cols) -->
+          <div class="lg:col-span-5 space-y-3 sm:space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="badge-gold">{{ project.categoryLabel }}</span>
+              <span class="text-xs text-slate-500">{{ project.location }}</span>
+            </div>
+
+            <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
+              {{ project.title }}
+            </h2>
+
+            <p class="font-display text-xl sm:text-2xl font-extrabold text-gold-600">
+              {{ project.price }}
+            </p>
+
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              {{ project.description }}
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 border-t border-slate-100 pt-4">
+              <div class="rounded-xl border border-slate-100 bg-slate-50 p-3">
+                <p class="text-[10px] uppercase font-bold text-slate-400">Durée d'action</p>
+                <p class="text-sm font-bold text-gold-600 mt-0.5">{{ project.duration }}</p>
+              </div>
+              <div class="rounded-xl border border-slate-100 bg-slate-50 p-3">
+                <p class="text-[10px] uppercase font-bold text-slate-400">Déplacement</p>
+                <p class="text-sm font-bold text-emerald-600 mt-0.5">0 FCFA</p>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a
+                :href="`https://wa.me/22997952738?text=Bonjour%20Cleaning%20Pro%20Service%2C%20je%20souhaite%20commander%20une%20prestation%20similaire%20à%20:%20${encodeURIComponent(project.title)}%20(${project.price}).`"
+                target="_blank"
+                rel="noopener"
+                class="btn-gold w-full text-center text-xs sm:text-sm !py-3.5 flex items-center justify-center gap-2"
+              >
+                <span>Commander sur WhatsApp</span>
+                <span>💬</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- CTA Bas de page -->
+      <div class="mt-16 sm:mt-20 text-center rounded-3xl border border-gold-500/30 bg-white p-6 sm:p-10 shadow-xl">
+        <h3 class="font-display text-xl xs:text-2xl sm:text-3xl font-bold text-slate-900">
+          Vous voulez un résultat identique chez vous ?
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto mt-2">
+          Contactez-nous sur WhatsApp. Déplacement totalement gratuit à Parakou.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
+          <a
+            href="https://wa.me/22997952738?text=Bonjour%20Cleaning%20Pro%20Service%2C%20je%20souhaite%20un%20devis%20gratuit."
+            target="_blank"
+            rel="noopener"
+            class="btn-gold flex items-center justify-center gap-2 text-xs sm:text-sm"
+          >
+            <span>Écrire sur WhatsApp (+229 97 95 27 38)</span>
+            <span>💬</span>
+          </a>
+          <NuxtLink to="/devis" class="btn-outline text-xs sm:text-sm text-center justify-center">Simuler mon devis</NuxtLink>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

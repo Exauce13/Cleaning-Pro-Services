@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-950: #FFFFFF;
+  --color-ink-900: #F8FAFC;
+  --color-ink-800: #F1F5F9;
+  --color-ink-700: #E2E8F0;
+  --color-ink-card: #FFFFFF;
+  --color-ink-card-hover: #F8FAFC;
+  --color-ink: #F8FAFC;
+  --color-ink-soft: #FFFFFF;
+
+  --color-gold-50: #F0F9FF;
+  --color-gold-100: #E0F2FE;
+  --color-gold-200: #BAE6FD;
+  --color-gold-300: #7DD3FC;
+  --color-gold-400: #38BDF8;
+  --color-gold-500: #2391E6;
+  --color-gold-600: #0284C7;
+  --color-gold-700: #0369A1;
+  --color-gold-800: #075985;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --shadow-gold: 0 10px 25px -5px rgba(35, 145, 230, 0.35);
+  --shadow-gold-lg: 0 20px 45px -10px rgba(35, 145, 230, 0.45);
+  --shadow-gold-glow: 0 0 50px -5px rgba(35, 145, 230, 0.25);
+  --shadow-glass: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
+
+  --background-image-gold-gradient: linear-gradient(135deg, #38BDF8 0%, #2391E6 50%, #0284C7 100%);
+  --background-image-gold-gradient-hover: linear-gradient(135deg, #7DD3FC 0%, #38BDF8 50%, #0369A1 100%);
+  --background-image-gold-subtle: linear-gradient(135deg, rgba(35, 145, 230, 0.12) 0%, rgba(2, 132, 199, 0.04) 100%);
+  --background-image-card-gradient: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: #0F172A;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(35, 145, 230, 0.07), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(35, 145, 230, 0.04), transparent 60%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background-color: var(--color-gold-500, #2391E6);
+  color: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2391E6;
+}
+
+@layer components {
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-500/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gold-700 backdrop-blur-md;
+  }
+
+  .section-title {
+    @apply font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 mt-3;
+  }
+
+  .section-subtitle {
+    @apply mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto;
+  }
+
+  .btn-gold {
+    @apply relative inline-flex items-center justify-center gap-2.5 rounded-xl bg-gold-gradient px-6 py-3.5
+           font-semibold text-white shadow-gold transition-all duration-300 hover:scale-[1.03]
+           hover:shadow-gold-lg active:scale-[0.98] font-sans;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-xl border border-gold-500/30 bg-white
+           px-6 py-3.5 font-semibold text-slate-800 shadow-sm transition-all duration-300
+           hover:border-gold-500 hover:bg-gold-50 hover:text-gold-700 active:scale-[0.98];
+  }
+
+  .btn-glass {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/80
+           px-5 py-2.5 text-sm font-medium text-slate-800 backdrop-blur-md shadow-sm transition-all duration-200
+           hover:border-slate-300 hover:bg-white;
+  }
+
+  .glass-card {
+    @apply relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/95 p-6 md:p-8
+           backdrop-blur-xl shadow-glass transition-all duration-300 hover:border-gold-500/40 hover:shadow-lg;
+  }
+
+  .gold-glow-border {
+    position: relative;
+  }
+  .gold-glow-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.4), rgba(35, 145, 230, 0.1), transparent 60%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-700 via-gold-500 to-sky-400;
+  }
+
+  .badge-gold {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 px-3 py-1 text-xs font-semibold text-gold-700;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(35, 145, 230, 0.3); }
+  50% { box-shadow: 0 0 35px rgba(35, 145, 230, 0.6); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite;
+}
