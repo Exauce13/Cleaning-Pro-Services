@@ -177,8 +177,11 @@ Message / Précisions : ${form.value.message.trim()}`
         <div class="lg:col-span-7 rounded-3xl border border-slate-200/80 bg-white p-5 sm:p-8 shadow-xl">
           <div class="flex items-center justify-between">
             <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Envoyez votre demande</h2>
-            <span class="inline-flex items-center gap-1 rounded-full bg-gold-50 px-2.5 py-0.5 text-[10px] sm:text-[11px] font-semibold text-gold-700 border border-gold-200 flex-none">
-              ⚡ Réponse rapide
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-gold-50 px-2.5 py-0.5 text-[10px] sm:text-[11px] font-semibold text-gold-700 border border-gold-200 flex-none">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-3 w-3 text-gold-600">
+                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+              </svg>
+              <span>Réponse rapide</span>
             </span>
           </div>
           <p class="text-xs sm:text-sm text-slate-500 mt-1">Votre message sera directement formaté et envoyé sur notre WhatsApp officiel après vérification.</p>
@@ -204,8 +207,9 @@ Message / Précisions : ${form.value.message.trim()}`
                   @input="onNameInput"
                   @blur="onNameBlur"
                 >
-                <p v-if="errors.name" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1">
-                  <span>⚠️</span> {{ errors.name }}
+                <p v-if="errors.name" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1.5">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 text-red-500 flex-none"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
+                  <span>{{ errors.name }}</span>
                 </p>
               </div>
 
@@ -228,8 +232,9 @@ Message / Précisions : ${form.value.message.trim()}`
                   @input="onPhoneInput"
                   @blur="onPhoneBlur"
                 >
-                <p v-if="errors.phone" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1">
-                  <span>⚠️</span> {{ errors.phone }}
+                <p v-if="errors.phone" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1.5">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 text-red-500 flex-none"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
+                  <span>{{ errors.phone }}</span>
                 </p>
                 <p v-else class="mt-1 text-[10px] text-slate-400">
                   Numéro à 8 chiffres (ex: 97 95 27 38) ou 10 chiffres (ex: 01 97 95 27 38).
@@ -272,8 +277,9 @@ Message / Précisions : ${form.value.message.trim()}`
                 @input="onMessageInput"
                 @blur="onMessageBlur"
               />
-              <p v-if="errors.message" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1">
-                <span>⚠️</span> {{ errors.message }}
+              <p v-if="errors.message" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1.5">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 text-red-500 flex-none"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
+                <span>{{ errors.message }}</span>
               </p>
               <p v-else class="mt-1 text-[10px] text-slate-400">
                 Décrivez votre besoin en quelques mots (pas uniquement des chiffres).

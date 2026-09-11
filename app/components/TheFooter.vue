@@ -67,7 +67,7 @@ const trustBadges = [
         <div class="relative z-10 flex flex-col items-center justify-between gap-6 sm:gap-8 lg:flex-row">
           <div class="text-center lg:text-left">
             <span class="badge-gold">
-              ✨ Devis Gratuit & Réponse Rapide
+              Devis Gratuit & Réponse Rapide
             </span>
             <h3 class="font-display text-xl xs:text-2xl sm:text-3xl font-bold text-white mt-3">
               Besoin d'un espace propre sans effort ?
@@ -155,20 +155,37 @@ const trustBadges = [
       <div>
         <p class="text-xs font-bold uppercase tracking-wider text-gold-400">Coordonnées</p>
         <ul class="mt-4 space-y-2.5 text-xs text-slate-300">
-          <li class="flex items-center gap-2">
-            <span class="text-gold-400">📞</span>
+          <li class="flex items-center gap-2.5">
+            <span class="flex h-5 w-5 flex-none items-center justify-center rounded-md bg-gold-500/15 text-gold-400">
+              <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-none stroke-current" stroke-width="2">
+                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
             <a href="tel:+2290197952738" class="hover:text-white">+229 01 97 95 27 38</a>
           </li>
-          <li class="flex items-center gap-2">
-            <span class="text-emerald-400">💬</span>
+          <li class="flex items-center gap-2.5">
+            <span class="flex h-5 w-5 flex-none items-center justify-center rounded-md bg-emerald-500/15 text-emerald-400">
+              <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-current">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm4.52 11.66c-.19-.09-1.12-.55-1.3-.61-.17-.06-.3-.09-.43.09-.12.19-.49.61-.6.73-.11.12-.23.14-.42.05-.19-.09-.81-.3-1.55-.95-.57-.51-.96-1.13-1.07-1.32-.11-.19-.01-.29.08-.38.09-.08.19-.23.29-.34.09-.12.12-.19.19-.32.06-.12.03-.23-.02-.32-.05-.09-.43-1.04-.6-1.42-.16-.38-.32-.33-.43-.33h-.37c-.12 0-.32.05-.49.23-.17.19-.65.64-.65 1.55 0 .92.67 1.8 1.48 2.37 1.84 1.28 2.5 1.4 3.39 1.76.84.34 1.61.3 2.19.22.66-.1 1.3-.53 1.48-1.04.19-.51.19-.95.13-1.04-.06-.09-.19-.15-.38-.25z" />
+              </svg>
+            </span>
             <a href="https://wa.me/22997952738" target="_blank" rel="noopener" class="hover:text-emerald-300">WhatsApp: +229 97 95 27 38</a>
           </li>
-          <li class="flex items-center gap-2">
-            <span class="text-gold-400">✉️</span>
+          <li class="flex items-center gap-2.5">
+            <span class="flex h-5 w-5 flex-none items-center justify-center rounded-md bg-gold-500/15 text-gold-400">
+              <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-none stroke-current" stroke-width="2">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
             <a href="mailto:cleanproservice7@gmail.com" class="hover:text-white">cleanproservice7@gmail.com</a>
           </li>
-          <li class="flex items-center gap-2">
-            <span class="text-gold-400">📍</span>
+          <li class="flex items-center gap-2.5">
+            <span class="flex h-5 w-5 flex-none items-center justify-center rounded-md bg-gold-500/15 text-gold-400">
+              <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-none stroke-current" stroke-width="2">
+                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
             <span>Parakou, Bénin (Déplacement 0 F)</span>
           </li>
         </ul>

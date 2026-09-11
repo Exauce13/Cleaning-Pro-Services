@@ -37,7 +37,6 @@ onMounted(() => {
             alt="Cleaning Pro Services Logo"
             class="h-full w-full object-contain"
           />
-          <span class="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-emerald-500 ring-2 ring-white" />
         </div>
         <div class="leading-tight">
           <div class="flex items-center gap-1 sm:gap-1.5">

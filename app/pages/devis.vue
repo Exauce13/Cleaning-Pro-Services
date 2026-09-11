@@ -15,7 +15,7 @@ const services = [
     label: 'Studio',
     priceRange: '3 000 – 7 000 FCFA',
     basePrice: 5000,
-    icon: '🏠',
+    icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
     description: 'Nettoyage complet du studio (sol au plafond)',
   },
   {
@@ -23,7 +23,7 @@ const services = [
     label: 'Appartement',
     priceRange: '10 000 – 20 000 FCFA',
     basePrice: 15000,
-    icon: '🏢',
+    icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
     description: 'Nettoyage intégral de l’appartement toutes pièces',
   },
   {
@@ -31,7 +31,7 @@ const services = [
     label: 'Nettoyage Général & Complet',
     priceRange: '10 000 – 30 000 FCFA',
     basePrice: 20000,
-    icon: '✨',
+    icon: 'M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z',
     description: 'Grand nettoyage en profondeur / villa / local pro / fin de chantier',
   },
   {
@@ -39,7 +39,7 @@ const services = [
     label: 'Abonnement Essentiel',
     priceRange: '18 000 FCFA/mois',
     basePrice: 18000,
-    icon: '📅',
+    icon: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z',
     description: '4 passages / mois (1x par semaine) avec produits inclus',
   },
   {
@@ -47,7 +47,7 @@ const services = [
     label: 'Abonnement Confort',
     priceRange: '35 000 FCFA/mois',
     basePrice: 35000,
-    icon: '👑',
+    icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
     description: '8 passages / mois (2x par semaine) avec nettoyage complet',
   },
 ]
@@ -215,7 +215,11 @@ Pouvez-vous me confirmer vos disponibilités pour l'intervention ?`
                 @click="selectedService = s"
               >
                 <div class="flex items-center gap-3">
-                  <span class="text-2xl flex-none">{{ s.icon }}</span>
+                  <div class="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-gold-500/10 text-gold-600 border border-gold-400/20">
+                    <svg viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-current" stroke-width="1.8">
+                      <path :d="s.icon" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
                   <div>
                     <p class="text-sm font-bold text-slate-900">{{ s.label }}</p>
                     <p class="text-xs text-slate-500">{{ s.description }}</p>
@@ -269,8 +273,9 @@ Pouvez-vous me confirmer vos disponibilités pour l'intervention ?`
                   @input="onNameInput"
                   @blur="touched.name = true; onNameInput()"
                 >
-                <p v-if="errors.name" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1">
-                  <span>⚠️</span> {{ errors.name }}
+                <p v-if="errors.name" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1.5">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 text-red-500 flex-none"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
+                  <span>{{ errors.name }}</span>
                 </p>
               </div>
               <div>
@@ -291,8 +296,9 @@ Pouvez-vous me confirmer vos disponibilités pour l'intervention ?`
                   @input="onPhoneInput"
                   @blur="touched.phone = true; onPhoneInput()"
                 >
-                <p v-if="errors.phone" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1">
-                  <span>⚠️</span> {{ errors.phone }}
+                <p v-if="errors.phone" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1.5">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 text-red-500 flex-none"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
+                  <span>{{ errors.phone }}</span>
                 </p>
               </div>
             </div>
@@ -325,8 +331,9 @@ Pouvez-vous me confirmer vos disponibilités pour l'intervention ?`
                 @input="onMessageInput"
                 @blur="touched.message = true; onMessageInput()"
               />
-              <p v-if="errors.message" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1">
-                <span>⚠️</span> {{ errors.message }}
+              <p v-if="errors.message" class="mt-1 text-xs text-red-600 font-medium flex items-center gap-1.5">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 text-red-500 flex-none"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
+                <span>{{ errors.message }}</span>
               </p>
             </div>
           </div>
@@ -371,8 +378,9 @@ Pouvez-vous me confirmer vos disponibilités pour l'intervention ?`
                 </svg>
               </button>
 
-              <p class="text-[11px] text-center text-slate-500">
-                💬 Votre message s'ouvrira directement sur WhatsApp avec votre sélection.
+              <p class="text-[11px] text-center text-slate-500 flex items-center justify-center gap-1.5">
+                <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-emerald-600 flex-none"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm4.52 11.66c-.19-.09-1.12-.55-1.3-.61-.17-.06-.3-.09-.43.09-.12.19-.49.61-.6.73-.11.12-.23.14-.42.05-.19-.09-.81-.3-1.55-.95-.57-.51-.96-1.13-1.07-1.32-.11-.19-.01-.29.08-.38.09-.08.19-.23.29-.34.09-.12.12-.19.19-.32.06-.12.03-.23-.02-.32-.05-.09-.43-1.04-.6-1.42-.16-.38-.32-.33-.43-.33h-.37c-.12 0-.32.05-.49.23-.17.19-.65.64-.65 1.55 0 .92.67 1.8 1.48 2.37 1.84 1.28 2.5 1.4 3.39 1.76.84.34 1.61.3 2.19.22.66-.1 1.3-.53 1.48-1.04.19-.51.19-.95.13-1.04-.06-.09-.19-.15-.38-.25z" /></svg>
+                <span>Votre message s'ouvrira directement sur WhatsApp avec votre sélection.</span>
               </p>
             </div>
           </div>
@@ -380,8 +388,11 @@ Pouvez-vous me confirmer vos disponibilités pour l'intervention ?`
           <!-- Assistance téléphonique -->
           <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
             <p class="text-xs text-slate-600">Vous préférez appeler directement ?</p>
-            <a href="tel:+2290197952738" class="text-sm font-bold text-gold-600 hover:text-gold-700 mt-1 inline-block">
-              📞 +229 01 97 95 27 38
+            <a href="tel:+2290197952738" class="text-sm font-bold text-gold-600 hover:text-gold-700 mt-1 inline-flex items-center gap-1.5">
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current" stroke-width="2">
+                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>+229 01 97 95 27 38</span>
             </a>
           </div>
         </div>

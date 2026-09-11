@@ -71,7 +71,10 @@ const subscriptions = [
     <!-- Mention Service Lessive -->
     <div class="mt-4 text-center">
       <span class="inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-500/10 px-4 py-1 text-xs text-gold-700 font-medium">
-        🧺 Service Lessive disponible — tarif sur mesure à la demande
+        <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-none stroke-current" stroke-width="1.8">
+          <path d="M4 6h16M7 6V4a1 1 0 011-1h8a1 1 0 011 1v2m-13 3l1.5 11.5a2 2 0 002 1.5h9a2 2 0 002-1.5L20 9H4z" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Service Lessive disponible — tarif sur mesure à la demande</span>
       </span>
     </div>
 
@@ -83,7 +86,7 @@ const subscriptions = [
         class="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-300 hover:border-gold-500/50 hover:shadow-xl hover:-translate-y-1"
       >
         <div v-if="service.popular" class="absolute top-0 right-0 rounded-bl-2xl bg-gold-gradient px-3.5 py-1 text-[11px] font-bold text-white shadow-md">
-          ⭐ Populaire
+          Populaire
         </div>
 
         <div>
@@ -152,7 +155,7 @@ const subscriptions = [
           ]"
         >
           <div v-if="sub.popular" class="absolute -top-3.5 right-8 rounded-full bg-gold-gradient px-4 py-1 text-xs font-bold text-white shadow-md">
-            Recommandé ⭐
+            Recommandé
           </div>
 
           <div>
@@ -184,7 +187,9 @@ const subscriptions = [
               class="btn-gold w-full text-center text-xs !py-3 flex items-center justify-center gap-2"
             >
               <span>Choisir cette formule sur WhatsApp</span>
-              <span>💬</span>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm4.52 11.66c-.19-.09-1.12-.55-1.3-.61-.17-.06-.3-.09-.43.09-.12.19-.49.61-.6.73-.11.12-.23.14-.42.05-.19-.09-.81-.3-1.55-.95-.57-.51-.96-1.13-1.07-1.32-.11-.19-.01-.29.08-.38.09-.08.19-.23.29-.34.09-.12.12-.19.19-.32.06-.12.03-.23-.02-.32-.05-.09-.43-1.04-.6-1.42-.16-.38-.32-.33-.43-.33h-.37c-.12 0-.32.05-.49.23-.17.19-.65.64-.65 1.55 0 .92.67 1.8 1.48 2.37 1.84 1.28 2.5 1.4 3.39 1.76.84.34 1.61.3 2.19.22.66-.1 1.3-.53 1.48-1.04.19-.51.19-.95.13-1.04-.06-.09-.19-.15-.38-.25z" />
+              </svg>
             </a>
           </div>
         </div>
