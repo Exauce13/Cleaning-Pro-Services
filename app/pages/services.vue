@@ -86,7 +86,6 @@ const subscriptions = [
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- En-tête -->
       <div class="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
-        <span class="section-eyebrow">Tarification Transparente</span>
         <h1 class="font-display text-3xl xs:text-4xl sm:text-5xl font-extrabold text-slate-900 break-words">
           Nos Services de <span class="text-gradient-gold">Nettoyage à Parakou</span>
         </h1>
@@ -154,7 +153,6 @@ const subscriptions = [
       <!-- Abonnements -->
       <div class="mt-20">
         <UiSectionHeading
-          eyebrow="Abonnements Réguliers"
           title="Gardez votre espace toujours propre"
           subtitle="Des formules mensuelles avantageuses avec passages programmés et produits inclus."
         />

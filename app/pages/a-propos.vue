@@ -56,7 +56,6 @@ const steps = [
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- En-tête -->
       <div class="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
-        <span class="section-eyebrow">Notre Entreprise</span>
         <h1 class="font-display text-3xl xs:text-4xl sm:text-5xl font-extrabold text-slate-900 break-words">
           L'Excellence du Nettoyage à <span class="text-gradient-gold">Parakou</span>
         </h1>
@@ -108,7 +107,6 @@ const steps = [
       <!-- Nos 4 Piliers -->
       <div class="mt-16 sm:mt-24">
         <UiSectionHeading
-          eyebrow="Nos Engagements"
           title="Pourquoi faire appel à nous ?"
           subtitle="Des garanties concrètes pour un service sans souci."
         />
@@ -133,7 +131,6 @@ const steps = [
       <!-- Processus en 4 étapes -->
       <div class="mt-16 sm:mt-24">
         <UiSectionHeading
-          eyebrow="Déroulement"
           title="Comment réserver votre prestation"
           subtitle="Une prise en charge simple et immédiate sur WhatsApp."
         />

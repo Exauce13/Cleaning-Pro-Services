@@ -15,17 +15,6 @@ const highlights = [
     <div class="mx-auto grid max-w-7xl w-full grid-cols-1 items-center gap-8 lg:gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8 my-auto">
       <!-- Colonne Texte (7 cols) -->
       <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-        <!-- Eyebrow Pill -->
-        <div class="inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-500/10 px-4 py-1.5 backdrop-blur-md">
-          <span class="flex h-2 w-2 relative">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-500 opacity-75" />
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-gold-500" />
-          </span>
-          <span class="text-xs font-bold tracking-widest text-gold-700 uppercase">
-            Nettoyage Haut de Gamme à Parakou
-          </span>
-        </div>
-
         <!-- Grand Titre -->
         <h1 class="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-tight text-slate-900 break-words">
           Un espace propre

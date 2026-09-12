@@ -106,7 +106,6 @@ Message / Précisions : ${form.value.message.trim()}`
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- En-tête -->
       <div class="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
-        <span class="section-eyebrow">Nous Contacter</span>
         <h1 class="font-display text-3xl xs:text-4xl sm:text-5xl font-extrabold text-slate-900 break-words">
           Contactez <span class="text-gradient-gold">Cleaning Pro Service</span>
         </h1>

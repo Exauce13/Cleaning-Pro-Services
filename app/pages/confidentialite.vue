@@ -9,8 +9,7 @@ useSeoMeta({
   <div class="py-16">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-8">
       <div class="border-b border-slate-200 pb-6">
-        <span class="section-eyebrow">Protection des données</span>
-        <h1 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-3">Politique de Confidentialité</h1>
+        <h1 class="font-display text-3xl sm:text-4xl font-bold text-slate-900">Politique de Confidentialité</h1>
       </div>
 
       <div class="space-y-6 text-sm text-slate-600 leading-relaxed">

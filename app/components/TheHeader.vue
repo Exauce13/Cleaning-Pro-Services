@@ -92,10 +92,7 @@ onMounted(() => {
         </div>
         <div class="flex items-center gap-1 sm:gap-1.5">
           <span class="font-display text-sm sm:text-base font-extrabold tracking-wider text-slate-900 group-hover:text-gold-600 transition-colors">
-            CLEANING PRO
-          </span>
-          <span class="rounded bg-gold-500/15 px-1 sm:px-1.5 py-0.5 text-[9px] sm:text-[10px] font-bold text-gold-600 border border-gold-400/30">
-            SERVICES
+            CLEANING PRO SERVICES
           </span>
         </div>
       </NuxtLink>

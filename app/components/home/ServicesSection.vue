@@ -123,8 +123,7 @@ const subscriptions = [
     <!-- Section Formules d'Abonnement Mensuel -->
     <div class="mt-20">
       <div class="text-center max-w-2xl mx-auto mb-10">
-        <span class="section-eyebrow">Formules Mensuelles</span>
-        <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-3">
+        <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">
           Nos Formules d'Abonnement
         </h3>
         <p class="text-xs sm:text-sm text-slate-600 mt-2">
