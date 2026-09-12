@@ -13,7 +13,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-2.5 sm:gap-3">
+  <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center gap-2.5 sm:gap-3">
     <!-- Bulle d'incitation (Tooltip) -->
     <Transition
       enter-active-class="transition duration-300 ease-out"

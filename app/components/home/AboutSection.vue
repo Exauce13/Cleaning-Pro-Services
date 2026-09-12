@@ -58,10 +58,6 @@ const values = [
 
       <!-- Colonne Texte & Valeurs (7 cols) -->
       <div class="lg:col-span-7 space-y-6">
-        <div class="inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-500/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-gold-700">
-          <span>À propos de nous</span>
-        </div>
-
         <h2 class="font-display text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
           Votre partenaire de propreté à
           <span class="text-gradient-gold">Parakou</span>

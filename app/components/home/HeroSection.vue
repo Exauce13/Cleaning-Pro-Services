@@ -8,11 +8,11 @@ const highlights = [
 </script>
 
 <template>
-  <section class="relative overflow-hidden pt-8 pb-20 lg:pt-16 lg:pb-32">
+  <section class="relative overflow-hidden min-h-[calc(100vh-73px)] min-h-[calc(100dvh-73px)] flex items-center justify-center py-8 lg:py-12">
     <!-- Halo azuré en arrière-plan -->
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[800px] rounded-full bg-gold-500/8 blur-[130px] pointer-events-none" />
 
-    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
+    <div class="mx-auto grid max-w-7xl w-full grid-cols-1 items-center gap-8 lg:gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8 my-auto">
       <!-- Colonne Texte (7 cols) -->
       <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
         <!-- Eyebrow Pill -->

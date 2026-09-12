@@ -66,7 +66,6 @@ const whatsappOrderUrl = computed(() => {
   <section id="realisations" class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
     <!-- En-tête de section -->
     <UiSectionHeading
-      eyebrow="Nos Résultats Par la Preuve"
       title="Comparateur Avant / Après Interactif"
       subtitle="Faites glisser le curseur pour visualiser la métamorphose de nos interventions à Parakou."
     />

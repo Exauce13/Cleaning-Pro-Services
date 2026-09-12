@@ -63,20 +63,9 @@ const subscriptions = [
   <section id="services" class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
     <!-- En-tête de section -->
     <UiSectionHeading
-      eyebrow="Nos Services & Tarifs"
       title="Des prestations adaptées à vos besoins"
       subtitle="Des tarifs clairs, transparents et compétitifs pour studios, appartements et nettoyage complet à Parakou."
     />
-
-    <!-- Mention Service Lessive -->
-    <div class="mt-4 text-center">
-      <span class="inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-500/10 px-4 py-1 text-xs text-gold-700 font-medium">
-        <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-none stroke-current" stroke-width="1.8">
-          <path d="M4 6h16M7 6V4a1 1 0 011-1h8a1 1 0 011 1v2m-13 3l1.5 11.5a2 2 0 002 1.5h9a2 2 0 002-1.5L20 9H4z" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span>Service Lessive disponible — tarif sur mesure à la demande</span>
-      </span>
-    </div>
 
     <!-- Grille des Prestations Ponctuelles -->
     <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
