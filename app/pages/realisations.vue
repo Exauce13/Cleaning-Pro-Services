@@ -15,9 +15,36 @@ interface Realisation {
   description: string
   duration: string
   price: string
+  aspectRatio?: string
 }
 
 const projects: Realisation[] = [
+  {
+    id: 'studio-chambre-complete',
+    title: 'Nettoyage & Rangement Studio Complet — Titirou',
+    category: 'studio',
+    categoryLabel: 'Studio & Chambre',
+    location: 'Quartier Titirou, Parakou',
+    before: '/images/imgavant1.jpeg',
+    after: '/images/imgafter1.jpeg',
+    description: 'Remise en ordre intégrale : ramassage, rangement soigné des effets personnels, dépoussiérage des placards et décapage du sol.',
+    duration: '2h30',
+    price: '3 000 – 7 000 FCFA',
+    aspectRatio: 'aspect-[4/5] sm:aspect-[4/3]',
+  },
+  {
+    id: 'studio-rangement-sol',
+    title: 'Désencombrement & Lustrage Sol Studio — Parakou',
+    category: 'studio',
+    categoryLabel: 'Studio & Rangement',
+    location: 'Centre-ville, Parakou',
+    before: '/images/imgavant2.jpeg',
+    after: '/images/imgafter2.jpeg',
+    description: 'Organisation méticuleuse des bagages et affaires au sol, grand nettoyage, décrassage et lustrage du carrelage.',
+    duration: '2 heures',
+    price: '3 000 – 7 000 FCFA',
+    aspectRatio: 'aspect-[4/5] sm:aspect-[4/3]',
+  },
   {
     id: 'studio-titirou',
     title: 'Nettoyage Séjour & Espace Repas — Titirou',
@@ -29,6 +56,7 @@ const projects: Realisation[] = [
     description: 'Remise en état complète d\'un séjour et espace repas : dépoussiérage du mobilier, décapage et lustrage minutieux des sols carrelés.',
     duration: '2h30',
     price: '3 000 – 7 000 FCFA',
+    aspectRatio: 'aspect-[16/10]',
   },
   {
     id: 'cuisine-centre-ville',
@@ -41,6 +69,7 @@ const projects: Realisation[] = [
     description: 'Dégraissage intensif de l\'évier inox, désinfection des surfaces de cuisson, nettoyage des placards et carrelage mural.',
     duration: '3 heures',
     price: '10 000 – 20 000 FCFA',
+    aspectRatio: 'aspect-[16/10]',
   },
   {
     id: 'sanitaires-farani',
@@ -53,6 +82,7 @@ const projects: Realisation[] = [
     description: 'Détartrage du lavabo colonne, élimination des résidus de savon et calcaire, désinfection totale des faïences et du sol.',
     duration: '2 heures',
     price: '10 000 – 20 000 FCFA',
+    aspectRatio: 'aspect-[16/10]',
   },
   {
     id: 'couloir-albarika',
@@ -65,6 +95,7 @@ const projects: Realisation[] = [
     description: 'Lavage approfondi et lustrage de carrelage de circulation : élimination des poussières tenaces et finitions impeccables sans traces.',
     duration: '2 heures',
     price: '10 000 – 30 000 FCFA',
+    aspectRatio: 'aspect-[16/10]',
   },
 ]
 
@@ -151,7 +182,7 @@ const filteredProjects = computed(() => {
               :after-image="project.after"
               :before-alt="`${project.title} avant nettoyage`"
               :after-alt="`${project.title} après nettoyage`"
-              aspect-ratio="aspect-[16/10]"
+              :aspect-ratio="project.aspectRatio || 'aspect-[16/10]'"
               :initial-position="50"
             />
           </div>

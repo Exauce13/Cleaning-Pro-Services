@@ -69,7 +69,7 @@ const steps = [
         <div class="lg:col-span-6 relative">
           <div class="overflow-hidden rounded-3xl border border-slate-200 shadow-xl">
             <img
-              src="/images/about_team_csp.jpg"
+              src="/images/cpsgroupe.jpg"
               alt="Équipe Cleaning Pro Service"
               class="h-[280px] xs:h-[360px] sm:h-[420px] w-full object-cover"
             >
