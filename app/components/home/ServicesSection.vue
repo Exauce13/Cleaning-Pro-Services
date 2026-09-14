@@ -103,7 +103,11 @@ const subscriptions = [
               :key="feature"
               class="flex items-start gap-2 text-xs text-slate-700"
             >
-              <span class="mt-0.5 text-gold-600 font-bold">✓</span>
+              <span class="mt-0.5 text-gold-600 flex-none">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="h-3.5 w-3.5">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </span>
               <span>{{ feature }}</span>
             </li>
           </ul>
@@ -161,7 +165,11 @@ const subscriptions = [
                 :key="f"
                 class="flex items-center gap-2.5 text-xs text-slate-700"
               >
-                <span class="flex h-4 w-4 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-600 text-[10px] font-bold">✓</span>
+                <span class="flex h-4 w-4 flex-none items-center justify-center rounded-full bg-emerald-500/15 text-emerald-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="h-2.5 w-2.5">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </span>
                 <span>{{ f }}</span>
               </li>
             </ul>
@@ -172,12 +180,9 @@ const subscriptions = [
               :href="`https://wa.me/22997952738?text=Bonjour%20Cleaning%20Pro%20Service%2C%20je%20souhaite%20souscrire%20à%20l'%20${encodeURIComponent(sub.name)}%20(${sub.price}/mois).`"
               target="_blank"
               rel="noopener"
-              class="btn-gold w-full text-center text-xs !py-3 flex items-center justify-center gap-2"
+              class="btn-gold w-full text-center text-xs !py-3 flex items-center justify-center"
             >
               <span>Choisir cette formule sur WhatsApp</span>
-              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current">
-                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm4.52 11.66c-.19-.09-1.12-.55-1.3-.61-.17-.06-.3-.09-.43.09-.12.19-.49.61-.6.73-.11.12-.23.14-.42.05-.19-.09-.81-.3-1.55-.95-.57-.51-.96-1.13-1.07-1.32-.11-.19-.01-.29.08-.38.09-.08.19-.23.29-.34.09-.12.12-.19.19-.32.06-.12.03-.23-.02-.32-.05-.09-.43-1.04-.6-1.42-.16-.38-.32-.33-.43-.33h-.37c-.12 0-.32.05-.49.23-.17.19-.65.64-.65 1.55 0 .92.67 1.8 1.48 2.37 1.84 1.28 2.5 1.4 3.39 1.76.84.34 1.61.3 2.19.22.66-.1 1.3-.53 1.48-1.04.19-.51.19-.95.13-1.04-.06-.09-.19-.15-.38-.25z" />
-              </svg>
             </a>
           </div>
         </div>

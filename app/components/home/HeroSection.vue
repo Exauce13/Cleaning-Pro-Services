@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const highlights = [
-  { icon: '✓', text: 'Déplacement 0 FCFA' },
-  { icon: '✓', text: 'Personnel formé & discret' },
-  { icon: '✓', text: 'Produits de qualité inclus' },
-  { icon: '✓', text: 'Satisfaction garantie' },
+  'Déplacement 0 FCFA',
+  'Personnel formé & discret',
+  'Produits de qualité inclus',
+  'Satisfaction garantie',
 ]
 </script>
 
@@ -41,12 +41,9 @@ const highlights = [
             href="https://wa.me/22997952738?text=Bonjour%20Cleaning%20Pro%20Service%2C%20je%20souhaite%20un%20devis%20gratuit."
             target="_blank"
             rel="noopener"
-            class="btn-outline w-full sm:w-auto text-sm sm:text-base flex items-center justify-center gap-2"
+            class="btn-outline w-full sm:w-auto text-sm sm:text-base flex items-center justify-center"
           >
             <span>WhatsApp direct</span>
-            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-emerald-600">
-              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm4.52 11.66c-.19-.09-1.12-.55-1.3-.61-.17-.06-.3-.09-.43.09-.12.19-.49.61-.6.73-.11.12-.23.14-.42.05-.19-.09-.81-.3-1.55-.95-.57-.51-.96-1.13-1.07-1.32-.11-.19-.01-.29.08-.38.09-.08.19-.23.29-.34.09-.12.12-.19.19-.32.06-.12.03-.23-.02-.32-.05-.09-.43-1.04-.6-1.42-.16-.38-.32-.33-.43-.33h-.37c-.12 0-.32.05-.49.23-.17.19-.65.64-.65 1.55 0 .92.67 1.8 1.48 2.37 1.84 1.28 2.5 1.4 3.39 1.76.84.34 1.61.3 2.19.22.66-.1 1.3-.53 1.48-1.04.19-.51.19-.95.13-1.04-.06-.09-.19-.15-.38-.25z" />
-            </svg>
           </a>
         </div>
 
@@ -54,13 +51,15 @@ const highlights = [
         <div class="pt-4 border-t border-slate-200 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 text-left">
           <div
             v-for="item in highlights"
-            :key="item.text"
+            :key="item"
             class="flex items-center gap-2 text-[11px] sm:text-xs font-medium text-slate-700"
           >
-            <span class="flex h-4 w-4 flex-none items-center justify-center rounded-full bg-gold-500/15 text-gold-600 text-[10px] font-bold">
-              {{ item.icon }}
+            <span class="flex h-4 w-4 flex-none items-center justify-center rounded-full bg-gold-500/15 text-gold-600">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-3 w-3">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
             </span>
-            <span>{{ item.text }}</span>
+            <span>{{ item }}</span>
           </div>
         </div>
       </div>
@@ -85,7 +84,7 @@ const highlights = [
                   <p class="text-[10px] sm:text-[11px] text-gold-300 leading-tight mt-0.5">Nettoyage Complet du sol au plafond</p>
                 </div>
                 <span class="flex-none rounded-full bg-emerald-500/20 px-2 py-0.5 sm:px-2.5 sm:py-1 text-[10px] font-semibold text-emerald-300 border border-emerald-500/30 whitespace-nowrap">
-                  Déplacement 0 F ✓
+                  Déplacement 0 F
                 </span>
               </div>
             </div>
@@ -104,8 +103,10 @@ const highlights = [
 
           <!-- Badge flottant 2 (Bas Gauche) : Tarifs transparents (format compact) -->
           <div class="hidden sm:flex absolute -bottom-4 -left-4 sm:-bottom-4 sm:-left-5 items-center gap-2 rounded-xl border border-slate-200 bg-white/95 py-1.5 px-3 sm:py-2 sm:px-3 shadow-lg ring-1 ring-slate-200 backdrop-blur-xl z-20">
-            <div class="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-lg bg-emerald-500/15 text-emerald-600 font-bold text-xs">
-              ✓
+            <div class="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-lg bg-emerald-500/15 text-emerald-600">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="h-3.5 w-3.5">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
             </div>
             <div>
               <p class="font-display text-xs sm:text-sm font-bold text-gold-600 leading-tight">Dès 3 000 FCFA</p>
