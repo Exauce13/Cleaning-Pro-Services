@@ -29,7 +29,7 @@ const values = [
       <div class="lg:col-span-5 relative">
         <div class="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-xl">
           <img
-            src="/images/about_team_csp.jpg"
+            src="/images/cpsgroupe.jpeg"
             alt="Équipe professionnelle de Cleaning Pro Service"
             class="h-[300px] xs:h-[380px] sm:h-[460px] w-full object-cover transition-transform duration-500 hover:scale-105"
           >
